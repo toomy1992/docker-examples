@@ -4,7 +4,7 @@ WORKDIR=$PWD
 
 echo "Cloning Repository"
 
-git clone 
+git clone git clone https://github.com/skygate/app-example.git
 
 echo "Preparing client side"
 
