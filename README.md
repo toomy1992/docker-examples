@@ -1,9 +1,10 @@
-First run  
+# First run
+
 chmod +x run_first_time.sh
 chmod +x run.sh
 
-To run First time use
+# To run First time use
 run_first_time.sh
 
-Next time use
+# Next time use
 run.sh
