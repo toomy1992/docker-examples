@@ -4,7 +4,7 @@ services:
   frontend:
     image: mhart/alpine-node:latest
     working_dir: /app
-    command: npm run start
+    command: sh -c "npm install && npm start"
     ports:
       - "3000"
     links:
@@ -15,7 +15,7 @@ services:
   backend:
     image: mhart/alpine-node:latest
     working_dir: /app
-    command: npm start
+    command: sh -c "npm install && npm start"
     ports:
       - "8080"
     volumes:

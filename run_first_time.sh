@@ -9,16 +9,10 @@ git clone https://github.com/skygate/app-example.git
 echo "Preparing client side"
 
 cd $WORKDIR/app-example/client
-npm install
 
 echo "Setting proxy from localhost to backend as container dns resolver"
 
 sed -i "s/localhost:8080/backend:8080/g" package.json
-
-echo "Preparing Server side"
-
-cd $WORKDIR/app-example/server
-npm install
 
 echo "Preparing ngnix"
 
