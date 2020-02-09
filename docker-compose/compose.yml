@@ -10,7 +10,7 @@ services:
     links:
       - backend
     volumes:
-      - ../app-example/client/:/app
+      - ./client/:/app
 
   backend:
     image: mhart/alpine-node:latest
@@ -19,16 +19,16 @@ services:
     ports:
       - "8080"
     volumes:
-      - ../app-example/server/:/app
+      - ./server/:/app
 
   nginx:
     image: nginx
     build:
       context: ./nginx
+    depends_on:
+      - frontend
     ports:
       - "80:80"
       - "443:443"
     links:
       - frontend
-    volumes:
-      - ../ssl/:/opt/nginx/ssl
